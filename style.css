@@ -1,0 +1,180 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: 'Red Hat Display',  sans-serif;
+    font-size: 16px;
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-color: hsl(225, 100%, 94%);
+    background-repeat: no-repeat;
+    background-size: 100% 50vh;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  background-color: white;
+  width: 450px;
+  border-radius: 15px;
+  box-shadow: 3px 5px 20px hsl(224, 23%, 80%);
+  overflow: hidden;
+}
+
+/* Box inside the container, including text and buttons */
+
+.message {
+  width: 350px;
+  margin: auto;
+  margin-bottom: 30px;
+
+}
+
+/* Order Summary + paragraph */
+
+.txt {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.txt p {
+  color:hsl(224, 23%, 55%);
+}
+
+.txt h1 {
+  font-size: 1.75em;
+  font-weight: 900;
+  margin-bottom: 15px;
+  color: hsl(223, 47%, 23%);
+}
+
+/* Actual plan div with light blue background */
+
+.annual-plan {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(225, 100%, 98%);
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 20px 0 20px 0;
+}
+
+  /* Text in the middle of actual plan div */
+
+  .annual-plan > * {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .actual-plan {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5em;
+  }
+
+  .actual-plan h2 {
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+    font-size: 1em;
+  }
+
+  .actual-plan p {
+    color: hsl(224, 23%, 55%);
+  }
+
+  /* Link to change plan, in third position of actual plan div */
+
+  .change-plan a {
+    color: hsl(245, 75%, 52%);
+  }
+
+.change-plan a:hover {
+  text-decoration: none;
+  color: hsl(245, 75%, 52%, 0.7);
+}
+
+/* Payment button */
+
+.payment {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border-style : none;
+  background-color:hsl(245, 75%, 52%);
+  color: white;
+  font-size: 1em;
+  font-weight: 700;
+  box-shadow: 0 5px 10px hsl(224, 23%, 70%);
+  
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.payment:hover {
+  background-color: hsl(245, 75%, 70%);
+}
+
+/* Cancel order  */
+
+.cancel-order {
+  display: flex;
+  justify-content: center;
+}
+
+.cancel-order a {
+  text-decoration: none;
+  color:hsl(224, 23%, 55%);
+  font-size: 1em;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.cancel-order a:hover{
+  color: hsl(223, 47%, 23%);
+}
+
+/* Media queries for mobile */ 
+
+@media only screen and (max-width: 450px) {
+  body {
+    background-image: url("images/pattern-background-mobile.svg");
+    background-size: 100% 450px;
+    height: 100vh;
+    font-size: 14px;
+}
+
+.container {
+  width: 90%;
+  height:auto;
+  
+}
+.image img {
+  width: 100%;
+}
+
+.message {
+  width: 80%;
+  margin-bottom: 20px;
+
+}
+
+.txt {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  
+}
